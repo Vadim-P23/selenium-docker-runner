@@ -34,7 +34,7 @@ pipeline{
             allure includeProperties: 
              false, 
              jdk: '', 
-             results: [[path: 'target/allure-results']]
+             results: [[path: 'tmp/allure-results']]
         }
     }
 }

@@ -31,6 +31,7 @@ pipeline{
             sh "docker compose -f test-suites.yaml down"
             archiveArtifacts artifacts: 'output/flight-reservation/emailable-report.html', followSymlinks: false
             archiveArtifacts artifacts: 'output/vendor-portal/emailable-report.html', followSymlinks: false
+            sh 'mkdir -p workspace/SELENIUM_DOCKER_RUNNER/allure-results'
             allure includeProperties: 
              false, 
              jdk: '', 

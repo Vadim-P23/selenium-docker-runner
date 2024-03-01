@@ -31,6 +31,10 @@ pipeline{
             sh "docker compose -f test-suites.yaml down"
             archiveArtifacts artifacts: 'output/flight-reservation/emailable-report.html', followSymlinks: false
             archiveArtifacts artifacts: 'output/vendor-portal/emailable-report.html', followSymlinks: false
+            allure includeProperties: 
+             false, 
+             jdk: '', 
+             results: [[path: 'allure-results']]
         }
     }
 }

@@ -34,7 +34,7 @@ pipeline{
             allure includeProperties: 
              false, 
              jdk: '', 
-             results: [[path: 'workspace/allure-results']]
+             results: [[path: 'workspace/SELENIUM_DOCKER_RUNNER/allure-results']]
         }
     }
 }
